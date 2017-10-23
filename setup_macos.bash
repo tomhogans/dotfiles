@@ -23,8 +23,6 @@ brew analytics off
 
 echo "Configuring macOS settings..."
 
-# Finder / File Panels
-
 ## Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
@@ -46,10 +44,6 @@ chflags nohidden ~/Library
 
 ## Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
-
-## Show the status bar
-
-defaults write com.apple.Safari ShowOverlayStatusBar 1
 
 ## Enable Safari’s debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
