@@ -66,4 +66,3 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parallels Desktop Lite", id: 1085114709
 mas "Slack", id: 803453959
-mas "Xcode", id: 497799835
