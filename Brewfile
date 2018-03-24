@@ -6,8 +6,6 @@ tap "homebrew/versions"
 
 cask_args appdir: '/Applications'
 
-brew "ansible"
-brew "ctags"
 brew "curl"
 brew "direnv"
 brew "dos2unix"
@@ -18,13 +16,11 @@ brew "lame"
 brew "libav"
 brew "mas"
 brew "mobile-shell"
-brew "mysql"
 brew "nmap"
 brew "node"
 brew "openssl"
 brew "postgresql"
 brew "python"
-brew "python3"
 brew "redis"
 brew "sqlite"
 brew "tmux"
@@ -62,5 +58,6 @@ mas "Keynote", id: 409183694
 mas "Microsoft Remote Desktop", id: 715768417
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Parallels Desktop Lite", id: 1085114709
 mas "Slack", id: 803453959
+mas "Telegram Desktop", id: 946399090
+mas "UTC Bar", id: 525372278
