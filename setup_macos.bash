@@ -18,7 +18,6 @@ echo "Finalizing Homebrew configuration..."
 brew update
 brew upgrade
 brew cleanup
-brew cask cleanup
 brew analytics off
 
 echo "Configuring macOS settings..."
