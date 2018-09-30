@@ -30,6 +30,7 @@ brew "youtube-dl"
 brew "zsh"
 brew "zsh-completions"
 
+cask "docker"
 cask "google-chrome"
 cask "google-backup-and-sync"
 cask "gpg-suite"
