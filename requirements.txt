@@ -1,9 +1,9 @@
 autopep8
 Django
-flake8
 ipython
 jedi
-numpy
+lxml
 pandas
+pylint
 psycopg2
 requests
