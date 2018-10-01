@@ -30,6 +30,8 @@ brew "youtube-dl"
 brew "zsh"
 brew "zsh-completions"
 
+cask "anki"
+cask "chromedriver"
 cask "docker"
 cask "google-chrome"
 cask "google-backup-and-sync"
@@ -38,6 +40,8 @@ cask "hex-fiend"
 cask "java"
 cask "rescuetime"
 cask "skype"
+cask "sqlpro-studio"
+cask "utc-menu-clock"
 cask "visual-studio-code"
 
 cask "qlcolorcode"
@@ -53,4 +57,3 @@ mas "Adobe Photoshop Elements 9 Editor", id: 443128855
 mas "Evernote", id: 406056744
 mas "Slack", id: 803453959
 mas "Telegram Desktop", id: 946399090
-mas "UTC Bar", id: 525372278
