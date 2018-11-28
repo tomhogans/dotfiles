@@ -1,123 +1,24 @@
-" Load Vundle and associated bundles of plugins
+set nocompatible
+filetype off 
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 Plugin 'VundleVim/Vundle.vim'
-" Call :BundleInstall in vim to update from repos
-Bundle "vim-scripts/The-NERD-tree"
-Bundle 'scrooloose/nerdcommenter'
-Bundle "majutsushi/tagbar"
-Bundle "bling/vim-airline"
-Bundle "tpope/vim-fugitive"
-Bundle "sheerun/vim-polyglot"
-Bundle "scrooloose/syntastic"
-Bundle 'Chiel92/vim-autoformat'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'w0rp/ale'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'plytophogy/vim-virtualenv'
 call vundle#end()
 
-set shell=/bin/sh
-
-syntax on
 filetype plugin indent on
+set number
 
-" vim settings, no vi-compability
-set nocompatible
-" Backspace fix for OSX
+" Fix for backspace in insert mode on macOS
 set backspace=indent,eol,start
 
-set viminfo='20,\"500 " remember registers after quitting
-set history=50        " remember more commands and search history
-set undolevels=50     " & lots of levels of undo
-
-set encoding=utf-8
-
-set number         " show line numbers
-set ruler          " show row/col info
-set showmatch      " show matching parenthesis
-
-set nowrap
-set autoindent     " always autoindent
-set hlsearch       " highlight search terms
-set incsearch      " use incremental searching
-
-set noswapfile
-set nobackup
-
-set laststatus=2
-
-set tags=./tags,tags;
-
-" filetype-based indent rules
-augroup vimrc
-au!
-autocmd FileType xml setlocal sw=2 sts=2 et
-autocmd FileType css setlocal sw=2 sts=2 tabstop=2
-autocmd FileType html setlocal sw=2 sts=2 tabstop=2
-
-autocmd Filetype c,cpp,h,hpp setlocal sw=2 sts=2 et
-autocmd FileType java setlocal sw=2 sts=2 et
-autocmd FileType clj,clojure setlocal sw=2 sts=2 et
-autocmd FileType scala setlocal sw=2 sts=2 et
-autocmd FileType haskell setlocal sw=2 sts=2 et
-
-autocmd FileType php setlocal sw=2 sts=2 tabstop=2 makeprg=php\ -e\ -f\ %
-autocmd FileType perl setlocal sw=4 sts=4 et makeprg=perl\ %
-autocmd FileType python setlocal sw=4 sts=4 et makeprg=python\ %
-autocmd FileType ruby setlocal sw=2 sts=2 et makeprg=ruby\ %
-
-autocmd FileType javascript setlocal sw=2 sts=2 tabstop=2 et makeprg=node\ %
-
-autocmd FileType sql setlocal et
-autocmd FileType text setlocal sw=2 sts=2 et tw=79
-
-autocmd FileType text,markdown,eruby setlocal wrap linebreak nolist
-
-augroup END
-
-" code (omni)completion
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType ruby set omnifunc=rubycomplete#Complete
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-
-" Fix color of autocomplete selected item background
-highlight Pmenu ctermbg=238
-highlight PmenuSel ctermfg=black
-
-
-" Local config
-if filereadable(".vimrc.local")
-  source .vimrc.local
-endif
-
-" Leader commands
-map <Leader>h :set invhls<CR>
-map <Leader>m :make!<CR>
-map <leader>t :NERDTreeToggle<CR>
-map <leader>T :TagbarToggle<CR>
-map <leader>l :setlocal number!<CR>
-map <leader>p :set paste!<CR>
-map <leader>S :SyntasticToggleMode<CR>
-
-map ; :CtrlPMixed<CR>
-
-" If NERDTree or Quickfix is the only window left, quit vim
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd bufenter * if (winnr("$") == 1 && &buftype == "quickfix") | q | endif
-
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
-
-" Syntastic settings changed for Javascript
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \""]
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-let g:syntastic_javascript_checkers = ['eslint']
-
-" Don't try to compile java files on save
-let g:loaded_syntastic_java_javac_checker = 1
-
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+let g:virtualenv_auto_activate = 1 
+let g:ale_python_pylint_options = '--load-plugins pylint_django'
