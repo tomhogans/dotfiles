@@ -12,6 +12,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'plytophogy/vim-virtualenv'
+Plugin 'fatih/vim-go'
 call vundle#end()
 
 filetype plugin indent on
