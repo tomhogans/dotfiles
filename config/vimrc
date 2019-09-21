@@ -10,9 +10,10 @@ Plugin 'tpope/vim-commentary'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'zxqfl/tabnine-vim'
 Plugin 'plytophogy/vim-virtualenv'
 Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 filetype plugin indent on
