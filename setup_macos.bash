@@ -59,3 +59,5 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 ## Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+# Change screenshot capture folder to ~/Downloads
+defaults write com.apple.screencapture location ~/Downloads
