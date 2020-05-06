@@ -16,3 +16,6 @@ then
 fi
 # Change extension names to the extensions you need
 npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+
+vim +PlugInstall
+vim +CocInstall coc-python coc-tsserver coc-eslint
