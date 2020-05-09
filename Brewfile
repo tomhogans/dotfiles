@@ -50,9 +50,7 @@ cask "quicklook-json"
 cask "webpquicklook"
 
 mas "Adobe Photoshop Elements 9 Editor", id: 443128855
-mas "Evernote", id: 406056744
 mas "iVI", id: 402279089
-mas "Microsoft Remote Desktop", id: 1295203466
 mas "Myna for Google Translate", id: 1100290134
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
