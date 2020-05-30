@@ -18,6 +18,7 @@ git config --global alias.br branch
 git config --global alias.co checkout
 
 echo "Setting up vim and plugins..."
+rm -rf ~/.vimrc ~/.vim/ ~/.config/nvim/
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
