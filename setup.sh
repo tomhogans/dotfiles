@@ -26,10 +26,15 @@ curl -fLo ~/.vimrc --create-dirs \
 	https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/vimrc
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
-echo "Installing and configuring oh-my-zsh..."
+echo "Setting up tmux config..."
+curl -fLo ~/.tmux.conf --create-dirs \
+	https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/tmux.conf
+
+echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 curl -fsSL https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/zshrc > ~/.zshrc
 
+echo "Configuring oh-my-zsh..."
 curl -fLo ~/.zshrc --create-dirs \
 	https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/zshrc
 
