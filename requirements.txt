@@ -1,9 +1,8 @@
-autopep8
+black
 Django
+flake8
 ipython
-jedi
 lxml
 pandas
-pylint
 psycopg2
 requests
