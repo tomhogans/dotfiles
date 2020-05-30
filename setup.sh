@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo "Installing Homebrew software..."
 
@@ -21,10 +21,12 @@ git config --global alias.br branch
 git config --global alias.co checkout
 
 echo "Setting up vim and plugins..."
-mkdir -p ~/.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fsSL https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/vimrc > ~/.vimrc
+curl -fsSL https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/nvim/vim.init > ~/.config/nvim/init.vim
 
 echo "Installing and configuring oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
