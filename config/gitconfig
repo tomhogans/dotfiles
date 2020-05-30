@@ -1,5 +1,0 @@
-[diff]
-tool = vimdiff
-
-[alias]
-st = status

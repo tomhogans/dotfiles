@@ -1,15 +1,12 @@
 #!/bin/sh
 
 echo "Installing Homebrew..."
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo "Installing Homebrew software..."
-
-# Install from Brewfile
 brew bundle
 
 echo "Finalizing Homebrew configuration..."
-
 brew update
 brew upgrade
 brew cleanup
@@ -25,12 +22,16 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -fsSL https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/vimrc > ~/.vimrc
-curl -fsSL https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/nvim/vim.init > ~/.config/nvim/init.vim
+curl -fLo ~/.vimrc --create-dirs \
+	https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/vimrc
+ln -s ~/.vimrc ~/.config/nvim/init.vim
 
 echo "Installing and configuring oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 curl -fsSL https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/zshrc > ~/.zshrc
+
+curl -fLo ~/.zshrc --create-dirs \
+	https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/zshrc
 
 PLATFORM_NAME=`uname`
 
