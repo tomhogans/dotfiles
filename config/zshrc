@@ -26,3 +26,5 @@ eval "$(direnv hook zsh)"
 # Download MP3 from YouTube
 alias getmp3='python3 $(which youtube-dl) --extract-audio --audio-format mp3'
 
+# Use ipdb when available for python breakpoint debugging
+export PYTHONBREAKPOINT=ipdb.set_trace
