@@ -3,6 +3,9 @@
 echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+git clone https://github.com/tomhogans/dotfiles.git ~/.dotfiles
+export DOTFILES="~/.dotfiles"
+
 echo "Installing Homebrew software..."
 brew bundle
 
@@ -19,25 +22,17 @@ git config --global alias.co checkout
 
 echo "Setting up vim and plugins..."
 rm -rf ~/.vimrc ~/.vim/ ~/.config/nvim/
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -fLo ~/.vimrc --create-dirs \
-	https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/vimrc
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -s $DOTFILES/config/vimrc ~/.vimrc
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
 echo "Setting up tmux config..."
-curl -fLo ~/.tmux.conf --create-dirs \
-	https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/tmux.conf
+ln -s $DOTFILES/config/tmux.conf ~/.tmux.conf
 
 echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-curl -fsSL https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/zshrc > ~/.zshrc
-
-echo "Configuring oh-my-zsh..."
-curl -fLo ~/.zshrc --create-dirs \
-	https://raw.githubusercontent.com/tomhogans/dotfiles/master/config/zshrc
+ln -s $DOTFILES/config/zshrc ~/.zshrc
 
 PLATFORM_NAME=`uname`
 
