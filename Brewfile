@@ -33,14 +33,12 @@ cask "gpg-suite"
 cask "hex-fiend"
 cask "java"
 cask "keybase"
-cask "rescuetime"
 cask "skype"
 cask "sqlpro-studio"
 cask "visual-studio-code"
 
 cask "quicklook-csv"
 
-mas "Adobe Photoshop Elements 9 Editor", id: 443128855
 mas "Drafts", id: 1435957248
 mas "iVI", id: 402279089
 mas "Myna for Google Translate", id: 1100290134
