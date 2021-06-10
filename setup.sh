@@ -1,14 +1,10 @@
 #!/bin/sh
 
-echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-git clone https://github.com/tomhogans/dotfiles.git ~/.dotfiles
+git clone git@github.com:tomhogans/dotfiles.git ~/.dotfiles
 export DOTFILES="~/.dotfiles"
 
-echo "Installing Homebrew software..."
-brew bundle
-
+echo "Installing Homebrew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 echo "Finalizing Homebrew configuration..."
 brew update
 brew upgrade
@@ -17,8 +13,7 @@ brew analytics off
 
 echo "Configuring git..."
 git config --global alias.st status
-git config --global alias.br branch
-git config --global alias.co checkout
+git config --global pull.rebase false
 
 echo "Setting up vim and plugins..."
 rm -rf ~/.vimrc ~/.vim/ ~/.config/nvim/
