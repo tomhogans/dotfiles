@@ -1,5 +1,20 @@
 #!/bin/sh
 
+git clone git@github.com:tomhogans/dotfiles.git ~/.dotfiles
+export DOTFILES="~/.dotfiles"
+
+echo "Installing Homebrew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo "Finalizing Homebrew configuration..."
+brew update
+brew upgrade
+brew cleanup
+brew analytics off
+
+echo "Configuring git..."
+git config --global alias.st status
+git config --global pull.rebase false
+
 echo "Setting up vim and plugins..."
 rm -rf ~/.vimrc ~/.vim/ ~/.config/nvim/
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

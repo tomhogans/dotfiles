@@ -30,7 +30,6 @@ brew "zsh-completions"
 
 cask "expressvpn"
 cask "google-chrome"
-cask "gpg-suite"
 cask "hex-fiend"
 cask "java"
 cask "keybase"
