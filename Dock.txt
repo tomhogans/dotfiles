@@ -1,0 +1,17 @@
+Finder
+Terminal
+Chrome
+Calendar
+Reminders
+Notes
+Drafts
+Slack
+VSCode
+Jira
+Skype
+Telegram
+Discord
+Messages
+WhatsApp
+Signal
+ExpressVPN
