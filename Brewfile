@@ -37,13 +37,13 @@ cask "signal"
 cask "skype"
 cask "sqlpro-studio"
 cask "visual-studio-code"
+cask "utc-menu-clock"
 
 cask "quicklook-csv"
 
 mas "Drafts", id: 1435957248
 mas "iVI", id: 402279089
 mas "Myna for Google Translate", id: 1100290134
-mas "The Clock", id: 488764545
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "WhatsApp", id: 1147396723
