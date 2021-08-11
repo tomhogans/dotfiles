@@ -81,7 +81,7 @@ else
 
 	sudo apt-get -y update
 
-	sudo apt-get install -y python3 python3-dev python3-pip
+	sudo apt-get install -y python3 python3-dev python3-pip libpq-dev
 
 	sudo apt-get install -y vim
 	sudo apt-get install -y tmux
