@@ -30,19 +30,21 @@ brew "zsh-completions"
 
 cask "1password"
 cask "discord"
+cask "docker"
 cask "front"
 cask "google-chrome"
 cask "hex-fiend"
 cask "java"
-cask "loom"
-cask "notion"
 cask "signal"
 cask "skype"
 cask "sqlpro-studio"
+cask "tailscale"
 cask "visual-studio-code"
+cask "zoom"
 
 cask "quicklook-csv"
 
+mas "Clocker", id: 1056643111
 mas "Drafts", id: 1435957248
 mas "iVI", id: 402279089
 mas "Myna for Google Translate", id: 1100290134
