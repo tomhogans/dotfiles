@@ -45,9 +45,11 @@ cask "zoom"
 cask "quicklook-csv"
 
 mas "Clocker", id: 1056643111
+mas "Dato", id: 1470584107
 mas "Drafts", id: 1435957248
 mas "iVI", id: 402279089
 mas "Myna for Google Translate", id: 1100290134
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
+mas "Todoist", id: 585829637
 mas "WhatsApp", id: 1147396723
