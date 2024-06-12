@@ -35,6 +35,8 @@ cask "front"
 cask "google-chrome"
 cask "hex-fiend"
 cask "java"
+cask "raycast"
+cask "shottr"
 cask "signal"
 cask "skype"
 cask "sqlpro-studio"
@@ -44,7 +46,6 @@ cask "zoom"
 
 cask "quicklook-csv"
 
-mas "Clocker", id: 1056643111
 mas "Dato", id: 1470584107
 mas "Drafts", id: 1435957248
 mas "iVI", id: 402279089
