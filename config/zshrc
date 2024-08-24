@@ -23,8 +23,8 @@ export EDITOR=vim
 # direnv hook
 eval "$(direnv hook zsh)"
 
-# Download MP3 from YouTube
-alias getmp3='python3 $(which youtube-dl) --extract-audio --audio-format mp3'
-
 # Use ipdb when available for python breakpoint debugging
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# Use 1Password SSH agent
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
