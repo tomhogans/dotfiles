@@ -1,8 +1,5 @@
 #!/bin/sh
 
-git clone git@github.com:tomhogans/dotfiles.git ~/.dotfiles
-export DOTFILES="~/.dotfiles"
-
 echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 echo "Finalizing Homebrew configuration..."
@@ -28,6 +25,12 @@ ln -s config/tmux.conf ~/.tmux.conf
 echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ln -s config/zshrc ~/.zshrc
+
+echo "Installing selected apps via Homebrew..."
+brew bundle
+
+git clone git@github.com:tomhogans/dotfiles.git ~/.dotfiles
+
 
 PLATFORM_NAME=`uname`
 
