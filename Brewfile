@@ -27,13 +27,9 @@ cask "discord"
 cask "docker"
 cask "front"
 cask "google-chrome"
-cask "google-drive"
 cask "hex-fiend"
-cask "raycast"
 cask "shottr"
 cask "signal"
-cask "skype"
-cask "sqlpro-studio"
 cask "tailscale"
 cask "zoom"
 
@@ -47,5 +43,6 @@ mas "Pages", id: 409201541
 mas "Parallels Client", id: 600925318
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
+mas "TinyTranslate", id: 1616724873
 mas "Todoist", id: 585829637
 mas "WhatsApp", id: 1147396723
