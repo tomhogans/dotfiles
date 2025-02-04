@@ -5,6 +5,7 @@ echo "Installing Homebrew..."
 echo "Finalizing Homebrew configuration..."
 brew update
 brew upgrade
+brew install git
 brew cleanup
 brew analytics off
 
@@ -12,11 +13,15 @@ echo "Configuring git..."
 git config --global alias.st status
 git config --global pull.rebase false
 
+echo "Cloning dotfiles repo..."
+git clone git@github.com:tomhogans/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+
 echo "Setting up vim and plugins..."
 rm -rf ~/.vimrc ~/.vim/ ~/.config/nvim/
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-ln -s config/vimrc ~/.vimrc
+ln -s ~/.dotfiles/config/vimrc ~/.vimrc
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
 echo "Setting up tmux config..."
@@ -28,8 +33,6 @@ ln -s config/zshrc ~/.zshrc
 
 echo "Installing selected apps via Homebrew..."
 brew bundle
-
-git clone git@github.com:tomhogans/dotfiles.git ~/.dotfiles
 
 
 PLATFORM_NAME=`uname`
