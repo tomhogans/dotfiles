@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 
 cask_args appdir: '/Applications'
 
+brew "age"
 brew "curl"
 brew "direnv"
 brew "dos2unix"
@@ -11,7 +12,6 @@ brew "mas"
 brew "mosh"
 brew "node"
 brew "openssl"
-brew "postgresql@16"
 brew "pyenv"
 brew "sqlite"
 brew "tmux"
@@ -28,7 +28,6 @@ cask "chatgpt"
 cask "cursor"
 cask "discord"
 cask "docker"
-cask "front"
 cask "google-chrome"
 cask "hex-fiend"
 cask "lulu"
@@ -46,7 +45,6 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parallels Client", id: 600925318
 mas "Slack", id: 803453959
-mas "Telegram", id: 747648890
 mas "TinyTranslate", id: 1616724873
 mas "Todoist", id: 585829637
 mas "WhatsApp", id: 1147396723
